@@ -748,3 +748,7 @@
 .copy-text.style-2 p > a:hover {
 	color: var(--tj-theme-primary);
 }
+
+.Title_module_title__1d89a229{
+	display: none !important;
+}
