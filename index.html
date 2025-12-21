@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio — Navbar Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <button id="menuBtn" class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="center-signature" aria-hidden>
+                <!-- simple signature svg -->
+                <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 20c10-8 22-12 36-8s30 10 48 4" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" opacity="0.9" />
+                </svg>
+            </div>
+
+            <div class="controls">
+                <div class="toggle" role="switch" aria-checked="false" tabindex="0">
+                    <div class="knob"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu overlay -->
+    <div id="menuOverlay" class="menu-overlay" aria-hidden="true">
+        <div class="menu-left">
+            <button id="closeBtn" class="close-square" aria-label="Close menu">
+                <span class="close-x">×</span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a class="nav-link active" href="#">HOME</a>
+                <a class="nav-link" href="#about">ABOUT</a>
+                <a class="nav-link" href="#">PROJECTS</a>
+                <a class="nav-link" href="#experience">EXPERIENCE</a>
+                <a class="nav-link" href="#education">EDUCATION</a>
+                <a class="nav-link" href="#">WRITING</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
+            </nav>
+        </div>
+
+        <div class="menu-backdrop" tabindex="-1" aria-hidden="true"></div>
+    </div>
+
+    <!-- Demo page content -->
+    <main class="demo-hero">
+        <div class="container">
+            <p class="subcopy">CRAFTING DIGITAL GOODS SINCE — Y:2017</p>
+            <h1 class="demo-title">Rahul<br>Kashyap</h1>
+        </div>
+    </main>
+
+    <div class="container">
+        <p class="demo-description">I’m Rahul Kashyap — a video editor passionately creating digital
+            experiences and solutions for over 5 years
+        </p>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden>
+            <div class="bar">
+                <div class="blue"></div>
+            </div>
+            <div class="scroll-text">SCROLL</div>
+        </div>
+    </div>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section container" aria-labelledby="about-title">
+        <div class="about-header">
+            <h2 id="about-title" class="about-title">ABOUT</h2>
+            <div class="about-line">
+                <div class="line-base"></div>
+                <div class="line-progress" aria-hidden></div>
+                <div class="line-arrow" aria-hidden>
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 9h23M16 2l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-left">
+                <p>My passion lies in the intersection of art and technology, creating visually captivating interfaces
+                    and elevating overall user digital experiences.</p>
+            </div>
+
+            <div class="about-right">
+                <p>I hold a Bachelor of Technology in Computer Science from the esteemed Art University and a Master of
+                    Fine Arts in Interactive Design. This academic foundation has equipped me with a solid understanding
+                    of the principles that underpin effective interaction design, providing me with the knowledge to
+                    create designs that seamlessly blend aesthetics and functionality.</p>
+            </div>
+
+
+        </div>
+        <!-- Skill cards (two cards side-by-side) -->
+        <section class="skill-cards container" aria-label="Skills">
+            <div class="card-row">
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">Framer</div>
+                        <div class="skill-sub">No code website builder tool</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">92%</div>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">Photoshop</div>
+                        <div class="skill-sub">Professional image editor</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">74%</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section container" aria-labelledby="projects-title">
+        <div class="about-header">
+            <h2 id="projects-title" class="about-title">PROJECTS</h2>
+            <div class="about-line">
+                <div class="line-base"></div>
+                <div class="line-progress" aria-hidden></div>
+            </div>
+        </div>
+
+        <div class="project-grid">
+            <a href="#" class="project-card"
+                style="background-image:url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1600&q=80&auto=format&fit=crop');">
+                <div class="project-overlay">
+                    <div class="project-title">Logo Design</div>
+                </div>
+            </a>
+
+            <a href="#" class="project-card"
+                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
+                <div class="project-overlay">
+                    <div class="project-title">Brand Identity</div>
+                </div>
+            </a>
+            <a href="#" class="project-card"
+                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
+                <div class="project-overlay">
+                    <div class="project-title">Brand Identity</div>
+                </div>
+            </a>
+            <a href="#" class="project-card"
+                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
+                <div class="project-overlay">
+                    <div class="project-title">Brand Identity</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section container" aria-labelledby="experience-title">
+        <div class="about-header">
+            <h2 id="experience-title" class="about-title">EXPERIENCE</h2>
+            <div class="about-line">
+                <div class="line-base"></div>
+                <div class="line-progress" aria-hidden></div>
+            </div>
+        </div>
+
+        <div class="experience-grid">
+            <div class="exp-card">
+                <h3>Senior UX/UI Designer</h3>
+                <div class="muted">SuperCo <br> 2019 — Present</div>
+                <p>Led the redesign of the flagship mobile application, resulting in an increase in user retention
+                    within six months. Implemented a streamlined user onboarding process, reducing user drop-offs.</p>
+            </div>
+
+            <div class="exp-card">
+                <h3>UI/UX Designer</h3>
+                <div class="muted">BlendXYZ <br> 2016 — 2017</div>
+                <p>Collaborated with the development team to implement a responsive design approach, improving the
+                    mobile user experience and increasing app engagement.</p>
+            </div>
+
+            <div class="exp-card">
+                <h3>Lead Product Designer</h3>
+                <div class="muted">CocoBasic <br> 2017 — 2019</div>
+                <p>Designed and implemented creative solutions such as wellness apps and high-traffic e-commerce
+                    websites, improving conversions and client satisfaction.</p>
+            </div>
+
+            <div class="exp-card">
+                <h3>Junior Designer</h3>
+                <div class="muted">Internistum <br> 2015 — 2016</div>
+                <p>Internship and starting position in the creative team, focused on creating wireframes, styleguides,
+                    presentations and prototypes for web and mobile applications.</p>
+            </div>
+        </div>
+
+        <div class="counters-grid">
+            <div class="counter">
+                <div class="counter-num">380+</div>
+                <div class="counter-label">Projects Completed</div>
+            </div>
+            <div class="counter">
+                <div class="counter-num">420+</div>
+                <div class="counter-label">Satisfied Clients</div>
+            </div>
+            <div class="counter">
+                <div class="counter-num">2K+</div>
+                <div class="counter-label">Positive Reviews</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- INFINITE MARQUEE SECTION -->
+    <section id="skills-marquee" class="marquee-section" aria-label="Skills marquee">
+        <div class="marquee-wrap">
+            <div class="marquee-track" aria-hidden="false">
+                <span class="marquee-item">PHOTOSHOP</span>
+                <span class="marquee-item">FIGMA</span>
+                <span class="marquee-item">ILLUSTRATOR</span>
+                <span class="marquee-item">FRAMER</span>
+                <span class="marquee-item">PHOTOSHOP</span>
+                <span class="marquee-item">FIGMA</span>
+            </div>
+        </div>
+
+        <div class="marquee-wrap reverse">
+            <div class="marquee-track reverse" aria-hidden="false">
+                <span class="marquee-item">FRAMER</span>
+                <span class="marquee-item">PHOTOSHOP</span>
+                <span class="marquee-item">FIGMA</span>
+                <span class="marquee-item">ILLUSTRATOR</span>
+                <span class="marquee-item">FRAMER</span>
+                <span class="marquee-item">PHOTOSHOP</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section container" aria-labelledby="education-title">
+        <div class="about-header">
+            <h2 id="education-title" class="about-title">EDUCATION</h2>
+            <div class="about-line">
+                <div class="line-base"></div>
+                <div class="line-progress" aria-hidden></div>
+            </div>
+        </div>
+
+        <div class="education-grid">
+            <div class="edu-card">
+                <h3>Master of Arts in Interaction Design</h3>
+                <div class="muted">Stanford University • 2012 — 2014</div>
+                <p>Specialized in user research, interaction design, user interface, digital and graphic design.</p>
+            </div>
+
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <div class="muted">University of California, Berkeley • 2008 — 2012</div>
+                <p>Gained a solid foundation in software development overall. Focused on building mobile applications.
+                </p>
+            </div>
+
+            <div class="edu-card">
+                <h3>Diploma in Graphic Design</h3>
+                <div class="muted">San Francisco Design Institute • 2007 — 2008</div>
+                <p>Focused on typography and digital design skills. Acquired fundamental knowledge of UI/UX.</p>
+            </div>
+
+            <div class="edu-card">
+                <h3>Art School</h3>
+                <div class="muted">San Francisco Design Institute • 2006 — 2007</div>
+                <p>Acquired fundamental graphic design skills and a basic knowledge of design in general.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section container" aria-labelledby="contact-title">
+        <div class="about-header">
+            <h2 id="contact-title" class="about-title">CONTACT</h2>
+            <div class="about-line">
+                <div class="line-base"></div>
+                <div class="line-progress" aria-hidden></div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-left">
+                <p class="contact-copy">Looking to start a project or you need consultation? Feel free to contact me.
+                </p>
+
+                <p class="contact-meta">San Francisco, CA, USA</p>
+                <p><a class="link" href="mailto:lucas@email.com">lucas@email.com</a></p>
+                <p><a class="link" href="https://www.cocobasic.com" target="_blank" rel="noopener">www.cocobasic.com</a>
+                </p>
+            </div>
+
+            <form class="contact-form" action="#" method="post"
+                onsubmit="event.preventDefault(); alert('Thanks — message sent (demo)');">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <textarea name="message" placeholder="Message..." rows="6" required></textarea>
+
+                <button class="btn-submit" type="submit">Send</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-copy">© 2025 Rahul Kashyap — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+</html>
