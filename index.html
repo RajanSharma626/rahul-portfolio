@@ -1,13 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio — Navbar Demo</title>
+    <title>Rahul Kashyap — Professional Video Editor & Motion Designer</title>
+    <meta name="description" content="Sleek, modern creative portfolio replica of Villo template, customized for Rahul Kashyap. Fully responsive with light & dark mode.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Header -->
     <header class="site-header">
@@ -18,330 +21,577 @@
                 <span></span>
             </button>
 
-            <div class="center-signature" aria-hidden>
-                <!-- simple signature svg -->
-                <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 20c10-8 22-12 36-8s30 10 48 4" stroke="#bdbdbd" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" opacity="0.9" />
+            <div class="center-signature" aria-hidden="true">
+                <!-- Sleek signature SVG / Logo -->
+                <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 24C25 15 45 8 68 11C91 14 105 23 112 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
 
             <div class="controls">
-                <div class="toggle" role="switch" aria-checked="false" tabindex="0">
-                    <div class="knob"></div>
-                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" aria-live="polite">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.22" x2="5.64" y2="17.78"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Menu overlay -->
+    <!-- Menu Overlay -->
     <div id="menuOverlay" class="menu-overlay" aria-hidden="true">
         <div class="menu-left">
             <button id="closeBtn" class="close-square" aria-label="Close menu">
-                <span class="close-x">×</span>
+                <span class="close-x">&times;</span>
             </button>
 
             <nav class="main-nav" aria-label="Main navigation">
-                <a class="nav-link active" href="#">HOME</a>
-                <a class="nav-link" href="#about">ABOUT</a>
-                <a class="nav-link" href="#">PROJECTS</a>
-                <a class="nav-link" href="#experience">EXPERIENCE</a>
-                <a class="nav-link" href="#education">EDUCATION</a>
-                <a class="nav-link" href="#">WRITING</a>
-                <a class="nav-link" href="#contact">CONTACT</a>
+                <a class="nav-link active" href="index.html">HOME</a>
+                <a class="nav-link" href="about.html">ABOUT</a>
+                <a class="nav-link" href="projects.html">PROJECTS</a>
+                <a class="nav-link" href="experience.html">EXPERIENCE</a>
+                <a class="nav-link" href="education.html">EDUCATION</a>
+                <a class="nav-link" href="writing.html">WRITING</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
             </nav>
-        </div>
 
+            <div class="menu-socials">
+                <a href="#" target="_blank" rel="noopener">FB</a>
+                <a href="#" target="_blank" rel="noopener">TW</a>
+                <a href="#" target="_blank" rel="noopener">INS</a>
+            </div>
+        </div>
         <div class="menu-backdrop" tabindex="-1" aria-hidden="true"></div>
     </div>
 
-    <!-- Demo page content -->
-    <main class="demo-hero">
-        <div class="container">
-            <p class="subcopy">CRAFTING DIGITAL GOODS SINCE — Y:2017</p>
-            <h1 class="demo-title">Rahul<br>Kashyap</h1>
-        </div>
-    </main>
-
-    <div class="container">
-        <p class="demo-description">I’m Rahul Kashyap — a video editor passionately creating digital
-            experiences and solutions for over 5 years
-        </p>
-
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator" aria-hidden>
-            <div class="bar">
-                <div class="blue"></div>
-            </div>
-            <div class="scroll-text">SCROLL</div>
-        </div>
-    </div>
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about-section container" aria-labelledby="about-title">
-        <div class="about-header">
-            <h2 id="about-title" class="about-title">ABOUT</h2>
-            <div class="about-line">
-                <div class="line-base"></div>
-                <div class="line-progress" aria-hidden></div>
-                <div class="line-arrow" aria-hidden>
-                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9h23M16 2l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="demo-hero">
+            <div class="container">
+                <p class="subcopy">CUTTING CINEMATIC STORIES SINCE &mdash; Y:2020</p>
+                <h1 class="demo-title">Rahul<br>Kashyap</h1>
+                <p class="demo-description">I’m Rahul Kashyap &mdash; a professional video editor & motion designer passionately crafting visual stories and high-impact digital edits for over 5 years.</p>
+                
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="bar">
+                        <div class="scroll-knob"></div>
+                    </div>
+                    <div class="scroll-text">SCROLL</div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="about-grid">
-            <div class="about-left">
-                <p>My passion lies in the intersection of art and technology, creating visually captivating interfaces
-                    and elevating overall user digital experiences.</p>
+        <!-- About Section -->
+        <section id="about" class="about-section container" aria-labelledby="about-title">
+            <a href="about.html" class="about-header" style="text-decoration: none;">
+                <h2 id="about-title" class="about-title">ABOUT</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <p>My passion lies in the intersection of film, dynamic pacing, and modern graphics, creating immersive video edits that captivate audiences and elevate storytelling.</p>
+                </div>
+                <div class="about-right">
+                    <p>I specialize in creative film editing, commercial post-production, and custom motion design. Working across platforms, I transform raw footage into sleek, high-tempo visual campaigns. Balancing narrative rhythm with sound design and precise color grading, I ensure every frame works towards building an unforgettable visual hook.</p>
+                </div>
             </div>
 
-            <div class="about-right">
-                <p>I hold a Bachelor of Technology in Computer Science from the esteemed Art University and a Master of
-                    Fine Arts in Interactive Design. This academic foundation has equipped me with a solid understanding
-                    of the principles that underpin effective interaction design, providing me with the knowledge to
-                    create designs that seamlessly blend aesthetics and functionality.</p>
-            </div>
-
-
-        </div>
-        <!-- Skill cards (two cards side-by-side) -->
-        <section class="skill-cards container" aria-label="Skills">
-            <div class="card-row">
+            <!-- Skill Cards Grid (6 cards) -->
+            <div class="skill-cards-grid">
                 <article class="skill-card">
                     <div class="skill-left">
-                        <div class="skill-title">Framer</div>
-                        <div class="skill-sub">No code website builder tool</div>
+                        <div class="skill-title">Premiere Pro</div>
+                        <div class="skill-sub">NLE Video editing & production</div>
                     </div>
-                    <div class="skill-divider" aria-hidden></div>
+                    <div class="skill-divider" aria-hidden="true"></div>
                     <div class="skill-right">
-                        <div class="skill-percent">92%</div>
+                        <div class="skill-percent">95%</div>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">After Effects</div>
+                        <div class="skill-sub">Motion graphics & VFX compositor</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden="true"></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">88%</div>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">DaVinci Resolve</div>
+                        <div class="skill-sub">Color grading & correction</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden="true"></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">90%</div>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">Sound Design</div>
+                        <div class="skill-sub">Audio mastering & sync FX</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden="true"></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">85%</div>
                     </div>
                 </article>
 
                 <article class="skill-card">
                     <div class="skill-left">
                         <div class="skill-title">Photoshop</div>
-                        <div class="skill-sub">Professional image editor</div>
+                        <div class="skill-sub">Asset preparation & thumbnail design</div>
                     </div>
-                    <div class="skill-divider" aria-hidden></div>
+                    <div class="skill-divider" aria-hidden="true"></div>
                     <div class="skill-right">
-                        <div class="skill-percent">74%</div>
+                        <div class="skill-percent">83%</div>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-left">
+                        <div class="skill-title">Cinema 4D</div>
+                        <div class="skill-sub">3D elements & logo reveals</div>
+                    </div>
+                    <div class="skill-divider" aria-hidden="true"></div>
+                    <div class="skill-right">
+                        <div class="skill-percent">54%</div>
                     </div>
                 </article>
             </div>
         </section>
-    </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects-section container" aria-labelledby="projects-title">
-        <div class="about-header">
-            <h2 id="projects-title" class="about-title">PROJECTS</h2>
-            <div class="about-line">
-                <div class="line-base"></div>
-                <div class="line-progress" aria-hidden></div>
-            </div>
-        </div>
-
-        <div class="project-grid">
-            <a href="#" class="project-card"
-                style="background-image:url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1600&q=80&auto=format&fit=crop');">
-                <div class="project-overlay">
-                    <div class="project-title">Logo Design</div>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section container" aria-labelledby="projects-title">
+            <a href="projects.html" class="about-header" style="text-decoration: none;">
+                <h2 id="projects-title" class="about-title">PROJECTS</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </a>
 
-            <a href="#" class="project-card"
-                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
-                <div class="project-overlay">
-                    <div class="project-title">Brand Identity</div>
+            <div class="project-grid">
+                <a href="projects.html" class="project-card landscape" style="background-image:url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80');">
+                    <video class="project-video" src="EL CHAPO.mp4" loop muted playsinline preload="none"></video>
+                    <div class="play-btn" aria-label="Play video">
+                        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" />
+                        </svg>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-title-badge">
+                            <span class="project-cat">NARRATIVE / SHORT FILM</span>
+                            <span class="project-name">EL CHAPO</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects.html" class="project-card portrait" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80');">
+                    <video class="project-video" src="Aum Dacro.mp4" loop muted playsinline preload="none"></video>
+                    <div class="play-btn" aria-label="Play video">
+                        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" />
+                        </svg>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-title-badge">
+                            <span class="project-cat">MUSIC VIDEO</span>
+                            <span class="project-name">Aum dacro</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects.html" class="project-card portrait" style="background-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&q=80');">
+                    <video class="project-video" src="moto tsr.mp4" loop muted playsinline preload="none"></video>
+                    <div class="play-btn" aria-label="Play video">
+                        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" />
+                        </svg>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-title-badge">
+                            <span class="project-cat">SPORTS CUT / PROMO</span>
+                            <span class="project-name">Moto tsr</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects.html" class="project-card landscape" style="background-image:url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=800&q=80');">
+                    <video class="project-video" src="EL CHAPO.mp4" loop muted playsinline preload="none"></video>
+                    <div class="play-btn" aria-label="Play video">
+                        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" />
+                        </svg>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-title-badge">
+                            <span class="project-cat">VIDEO COMMERCIAL</span>
+                            <span class="project-name">Nike "Run Free" Campaign</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section container" aria-labelledby="experience-title">
+            <a href="experience.html" class="about-header" style="text-decoration: none;">
+                <h2 id="experience-title" class="about-title">EXPERIENCE</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </a>
-            <a href="#" class="project-card"
-                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
-                <div class="project-overlay">
-                    <div class="project-title">Brand Identity</div>
+
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <h3>Senior Video Editor</h3>
+                    <div class="muted">SuperCo &bull; 2022 &mdash; Present</div>
+                    <p>Led post-production for high-budget commercial campaigns, achieving millions of views across digital platforms. Designed and animated complex motion graphic assets for brand commercials.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h3>Lead Motion Designer</h3>
+                    <div class="muted">CocoBasic &bull; 2020 &mdash; 2022</div>
+                    <p>Crafted 2D/3D visual effects, titles, and cinematic intros for clients. Collaborated on storyboard designs, visual layout systems, and asset tracking workflows.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h3>Video Editor & VFX Artist</h3>
+                    <div class="muted">BlendXYZ &bull; 2018 &mdash; 2020</div>
+                    <p>Edited narrative videos, short films, and promotional materials. Handled immersive sound design, audio leveling, and creative color correction.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h3>Assistant Video Editor</h3>
+                    <div class="muted">Internistum &bull; 2017 &mdash; 2018</div>
+                    <p>Supported post-production crew by cataloging footage bins, performing rough cuts, and prepping final timelines for Davinci grading and export passes.</p>
+                </div>
+            </div>
+
+            <div class="counters-grid">
+                <div class="counter">
+                    <div class="counter-num">380+</div>
+                    <div class="counter-label">Videos Edited</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-num">420+</div>
+                    <div class="counter-label">Happy Clients</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-num">2K+</div>
+                    <div class="counter-label">Completed Deliverables</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Marquee Section -->
+        <section id="skills-marquee" class="marquee-section" aria-label="Skills Marquee">
+            <div class="marquee-wrap">
+                <div class="marquee-track" data-speed="60">
+                    <span class="marquee-item">PREMIERE PRO</span>
+                    <span class="marquee-item">AFTER EFFECTS</span>
+                    <span class="marquee-item">DAVINCI RESOLVE</span>
+                    <span class="marquee-item">SOUND DESIGN</span>
+                    <span class="marquee-item">CINEMA 4D</span>
+                </div>
+            </div>
+            <div class="marquee-wrap reverse">
+                <div class="marquee-track reverse" data-speed="60">
+                    <span class="marquee-item">COLOR GRADING</span>
+                    <span class="marquee-item">MOTION DESIGN</span>
+                    <span class="marquee-item">VIDEO PRODUCTION</span>
+                    <span class="marquee-item">VFX COMPOSITING</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Circular Skills Section -->
+        <section id="education" class="education-section container" aria-labelledby="education-title">
+            <a href="education.html" class="about-header" style="text-decoration: none;">
+                <h2 id="education-title" class="about-title">EDUCATION</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </a>
-            <a href="#" class="project-card"
-                style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&auto=format&fit=crop');">
-                <div class="project-overlay">
-                    <div class="project-title">Brand Identity</div>
+
+            <div class="education-grid-wrapper">
+                <div class="education-timeline">
+                    <div class="edu-card">
+                        <h3>Master of Fine Arts in Film & Digital Media</h3>
+                        <div class="muted">Stanford University &bull; 2015 &mdash; 2017</div>
+                        <p>Specialized in visual storytelling, digital editing theory, sound track editing, and digital post-production.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <h3>Bachelor of Arts in Film & Television Production</h3>
+                        <div class="muted">University of California, Berkeley &bull; 2011 &mdash; 2015</div>
+                        <p>Gained a solid foundation in cinematography, scriptwriting, video editing suites, and lighting layout setups.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <h3>Diploma in Visual Effects & Motion Graphics</h3>
+                        <div class="muted">San Francisco Design Institute &bull; 2010 &mdash; 2011</div>
+                        <p>Focused on keying, rotoscoping, digital compositing, 2D vector animation, and motion design theory.</p>
+                    </div>
+                </div>
+
+                <div class="circular-skills-panel">
+                    <div class="circular-skill-card">
+                        <div class="svg-container">
+                            <svg class="radial-progress-bar" viewBox="0 0 120 120">
+                                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="circle-fg" cx="60" cy="60" r="50" data-pct="95"></circle>
+                            </svg>
+                            <span class="skill-value">95%</span>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Video Editing</h4>
+                        </div>
+                    </div>
+
+                    <div class="circular-skill-card">
+                        <div class="svg-container">
+                            <svg class="radial-progress-bar" viewBox="0 0 120 120">
+                                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="circle-fg" cx="60" cy="60" r="50" data-pct="88"></circle>
+                            </svg>
+                            <span class="skill-value">88%</span>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Motion Graphics</h4>
+                        </div>
+                    </div>
+
+                    <div class="circular-skill-card">
+                        <div class="svg-container">
+                            <svg class="radial-progress-bar" viewBox="0 0 120 120">
+                                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="circle-fg" cx="60" cy="60" r="50" data-pct="90"></circle>
+                            </svg>
+                            <span class="skill-value">90%</span>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Color Grading</h4>
+                        </div>
+                    </div>
+
+                    <div class="circular-skill-card">
+                        <div class="svg-container">
+                            <svg class="radial-progress-bar" viewBox="0 0 120 120">
+                                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="circle-fg" cx="60" cy="60" r="50" data-pct="82"></circle>
+                            </svg>
+                            <span class="skill-value">82%</span>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Sound Design</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Section -->
+        <section id="writing" class="writing-section container" aria-labelledby="writing-title">
+            <a href="writing.html" class="about-header" style="text-decoration: none;">
+                <h2 id="writing-title" class="about-title">WRITING</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </a>
-        </div>
-    </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="experience-section container" aria-labelledby="experience-title">
-        <div class="about-header">
-            <h2 id="experience-title" class="about-title">EXPERIENCE</h2>
-            <div class="about-line">
-                <div class="line-base"></div>
-                <div class="line-progress" aria-hidden></div>
+            <div class="writing-list">
+                <article class="writing-item">
+                    <div class="writing-meta">
+                        <span class="writing-date">May 28, 2025</span>
+                        <span class="writing-tag">COLOR</span>
+                    </div>
+                    <a href="writing.html" class="writing-link">
+                        <h3 class="writing-post-title">Mastering color grading in DaVinci Resolve</h3>
+                        <div class="writing-arrow">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="writing-item">
+                    <div class="writing-meta">
+                        <span class="writing-date">May 20, 2025</span>
+                        <span class="writing-tag">EDITING</span>
+                    </div>
+                    <a href="writing.html" class="writing-link">
+                        <h3 class="writing-post-title">My storytelling process in narrative editing</h3>
+                        <div class="writing-arrow">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="writing-item">
+                    <div class="writing-meta">
+                        <span class="writing-date">Apr 14, 2025</span>
+                        <span class="writing-tag">THEORY</span>
+                    </div>
+                    <a href="writing.html" class="writing-link">
+                        <h3 class="writing-post-title">Visual pacing and rhythm in commercial cuts</h3>
+                        <div class="writing-arrow">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="writing-item">
+                    <div class="writing-meta">
+                        <span class="writing-date">Mar 12, 2025</span>
+                        <span class="writing-tag">WORKFLOW</span>
+                    </div>
+                    <a href="writing.html" class="writing-link">
+                        <h3 class="writing-post-title">Organizing project bins for complex timelines</h3>
+                        <div class="writing-arrow">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="writing-item">
+                    <div class="writing-meta">
+                        <span class="writing-date">Feb 20, 2025</span>
+                        <span class="writing-tag">SOUND</span>
+                    </div>
+                    <a href="writing.html" class="writing-link">
+                        <h3 class="writing-post-title">Audio design techniques for immersive films</h3>
+                        <div class="writing-arrow">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <div class="experience-grid">
-            <div class="exp-card">
-                <h3>Senior UX/UI Designer</h3>
-                <div class="muted">SuperCo <br> 2019 — Present</div>
-                <p>Led the redesign of the flagship mobile application, resulting in an increase in user retention
-                    within six months. Implemented a streamlined user onboarding process, reducing user drop-offs.</p>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section container" aria-labelledby="contact-title">
+            <a href="contact.html" class="about-header" style="text-decoration: none;">
+                <h2 id="contact-title" class="about-title">CONTACT</h2>
+                <div class="about-line">
+                    <div class="line-base"></div>
+                    <div class="line-progress" aria-hidden="true"></div>
+                    <div class="line-arrow" aria-hidden="true">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L8 8L1.5 14.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
 
-            <div class="exp-card">
-                <h3>UI/UX Designer</h3>
-                <div class="muted">BlendXYZ <br> 2016 — 2017</div>
-                <p>Collaborated with the development team to implement a responsive design approach, improving the
-                    mobile user experience and increasing app engagement.</p>
-            </div>
-
-            <div class="exp-card">
-                <h3>Lead Product Designer</h3>
-                <div class="muted">CocoBasic <br> 2017 — 2019</div>
-                <p>Designed and implemented creative solutions such as wellness apps and high-traffic e-commerce
-                    websites, improving conversions and client satisfaction.</p>
-            </div>
-
-            <div class="exp-card">
-                <h3>Junior Designer</h3>
-                <div class="muted">Internistum <br> 2015 — 2016</div>
-                <p>Internship and starting position in the creative team, focused on creating wireframes, styleguides,
-                    presentations and prototypes for web and mobile applications.</p>
-            </div>
-        </div>
-
-        <div class="counters-grid">
-            <div class="counter">
-                <div class="counter-num">380+</div>
-                <div class="counter-label">Projects Completed</div>
-            </div>
-            <div class="counter">
-                <div class="counter-num">420+</div>
-                <div class="counter-label">Satisfied Clients</div>
-            </div>
-            <div class="counter">
-                <div class="counter-num">2K+</div>
-                <div class="counter-label">Positive Reviews</div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- INFINITE MARQUEE SECTION -->
-    <section id="skills-marquee" class="marquee-section" aria-label="Skills marquee">
-        <div class="marquee-wrap">
-            <div class="marquee-track" aria-hidden="false">
-                <span class="marquee-item">PHOTOSHOP</span>
-                <span class="marquee-item">FIGMA</span>
-                <span class="marquee-item">ILLUSTRATOR</span>
-                <span class="marquee-item">FRAMER</span>
-                <span class="marquee-item">PHOTOSHOP</span>
-                <span class="marquee-item">FIGMA</span>
-            </div>
-        </div>
-
-        <div class="marquee-wrap reverse">
-            <div class="marquee-track reverse" aria-hidden="false">
-                <span class="marquee-item">FRAMER</span>
-                <span class="marquee-item">PHOTOSHOP</span>
-                <span class="marquee-item">FIGMA</span>
-                <span class="marquee-item">ILLUSTRATOR</span>
-                <span class="marquee-item">FRAMER</span>
-                <span class="marquee-item">PHOTOSHOP</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="education-section container" aria-labelledby="education-title">
-        <div class="about-header">
-            <h2 id="education-title" class="about-title">EDUCATION</h2>
-            <div class="about-line">
-                <div class="line-base"></div>
-                <div class="line-progress" aria-hidden></div>
-            </div>
-        </div>
-
-        <div class="education-grid">
-            <div class="edu-card">
-                <h3>Master of Arts in Interaction Design</h3>
-                <div class="muted">Stanford University • 2012 — 2014</div>
-                <p>Specialized in user research, interaction design, user interface, digital and graphic design.</p>
-            </div>
-
-            <div class="edu-card">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <div class="muted">University of California, Berkeley • 2008 — 2012</div>
-                <p>Gained a solid foundation in software development overall. Focused on building mobile applications.
-                </p>
-            </div>
-
-            <div class="edu-card">
-                <h3>Diploma in Graphic Design</h3>
-                <div class="muted">San Francisco Design Institute • 2007 — 2008</div>
-                <p>Focused on typography and digital design skills. Acquired fundamental knowledge of UI/UX.</p>
-            </div>
-
-            <div class="edu-card">
-                <h3>Art School</h3>
-                <div class="muted">San Francisco Design Institute • 2006 — 2007</div>
-                <p>Acquired fundamental graphic design skills and a basic knowledge of design in general.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section container" aria-labelledby="contact-title">
-        <div class="about-header">
-            <h2 id="contact-title" class="about-title">CONTACT</h2>
-            <div class="about-line">
-                <div class="line-base"></div>
-                <div class="line-progress" aria-hidden></div>
-            </div>
-        </div>
-
-        <div class="contact-grid">
-            <div class="contact-left">
-                <p class="contact-copy">Looking to start a project or you need consultation? Feel free to contact me.
-                </p>
-
-                <p class="contact-meta">San Francisco, CA, USA</p>
-                <p><a class="link" href="mailto:lucas@email.com">lucas@email.com</a></p>
-                <p><a class="link" href="https://www.cocobasic.com" target="_blank" rel="noopener">www.cocobasic.com</a>
-                </p>
-            </div>
-
-            <form class="contact-form" action="#" method="post"
-                onsubmit="event.preventDefault(); alert('Thanks — message sent (demo)');">
-                <div class="form-row">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <p class="contact-copy">Looking to start a project or you need consultation? Feel free to contact me.</p>
+                    <p class="contact-meta">San Francisco, CA, USA</p>
+                    <p><a class="link" href="mailto:lucas@email.com">lucas@email.com</a></p>
+                    <p><a class="link" href="https://www.cocobasic.com" target="_blank" rel="noopener">www.cocobasic.com</a></p>
                 </div>
 
-                <textarea name="message" placeholder="Message..." rows="6" required></textarea>
+                <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); showContactSuccess();">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Name" required aria-label="Your Name">
+                        <input type="email" name="email" placeholder="Email" required aria-label="Your Email">
+                    </div>
+                    <textarea name="message" placeholder="Message..." rows="6" required aria-label="Your Message"></textarea>
+                    <button class="btn-submit" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                <button class="btn-submit" type="submit">Send</button>
-            </form>
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <p class="footer-copy">© 2025 Rahul Kashyap — All rights reserved.</p>
+        <div class="container footer-content">
+            <p class="footer-copy">&copy; 2025 Rahul Kashyap &mdash; All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" target="_blank" rel="noopener">FB</a>
+                <a href="#" target="_blank" rel="noopener">TW</a>
+                <a href="#" target="_blank" rel="noopener">INS</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
-
-</html>
-
 </html>
